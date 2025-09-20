@@ -13,8 +13,7 @@
 
 <body>
    <!-- Modals -->
-   <!-- Skills Modal -->
-   <div class="modal" id="skillsModal">
+   <div class="modal" id="myModal">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
          <div class="content-title"><span>Skills</span></div>
@@ -37,26 +36,30 @@
       </div>
    </div>
 
-   <!-- Tools Modal -->
-   <div class="modal" id="toolsModal">
+   <div class="modal" id="myModal1">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
          <div class="content-title"><span>Tools & DevOps</span></div>
          <div class="desc_content">
-            <ul class="services_list">
+            <p>Worked with tools and technologies including:</p>
+            <ul class="services_list" style="display:inline-block;">
                <li>Git</li>
                <li>Jenkins</li>
-               <li>Postman</li>
                <li>Figma</li>
+               <li>PrimeNG</li>
+               <li>AG-Grid</li>
+            </ul>
+            <ul class="services_list" style="display:inline-block;">
                <li>Vs Code</li>
                <li>Material Design</li>
+               <li>Postman</li>
+               <li>Jasmine & Karma</li>
             </ul>
          </div>
       </div>
    </div>
 
-   <!-- About Modal -->
-   <div class="modal" id="aboutModal">
+   <div class="modal" id="myModal2">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
          <div class="content-title"><span>About Me</span></div>
@@ -78,11 +81,73 @@
                      <i class="fa fa-times" onclick="menuClose()"></i>
                   </div>
                   <li class="list"><a href="#" class="link">Home</a></li>
-                  <li class="list"><a href="#skillsModal" class="link" id="skillsBtn">Skills <i class="fa-solid fa-caret-down"></i></a></li>
-                  <li class="list"><a href="#toolsModal" class="link" id="toolsBtn">Tools <i class="fa-solid fa-caret-down"></i></a></li>
-                  <li class="list"><a href="#aboutModal" class="link" id="aboutBtn">About <i class="fa-solid fa-caret-down"></i></a></li>
+
+                  <li class="list">
+                     <a href="#myModal" class="link" id="myBtn">Skills <i class="fa-solid fa-caret-down"></i></a>
+                     <div class="description_box">
+                        <div class="link_description" id="myDescription">
+                           <div class="content-title"><span>I'm Skilled In</span></div>
+                           <div class="desc_content">
+                              <span class="skills-label">Angular 7–17</span>
+                              <span class="skills-label">TypeScript</span>
+                              <span class="skills-label">JavaScript</span>
+                              <span class="skills-label">HTML5</span>
+                              <span class="skills-label">CSS3</span>
+                              <span class="skills-label">Bootstrap</span>
+                              <span class="skills-label">Angular Material</span>
+                              <span class="skills-label">PrimeNG</span>
+                              <span class="skills-label">AG-Grid</span>
+                              <span class="skills-label">RxJS</span>
+                              <span class="skills-label">Reactive Forms</span>
+                              <span class="skills-label">Google Maps JS API</span>
+                              <span class="skills-label">Flutter</span>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list">
+                     <a href="#myModal1" class="link" id="myBtn">Tools <i class="fa-solid fa-caret-down"></i></a>
+                     <div class="description_box">
+                        <div class="link_description" id="myDescription">
+                           <div class="desc_content" style="flex: 50%;">
+                              <p>Worked with tools and technologies including:</p>
+                              <ul class="services_list" style="display:inline-block;">
+                                 <li>Git</li>
+                                 <li>Jenkins</li>
+                                 <li>Figma</li>
+                                 <li>PrimeNG</li>
+                                 <li>AG-Grid</li>
+                              </ul>
+                              <ul class="services_list" style="display:inline-block;">
+                                 <li>Vs Code</li>
+                                 <li>Material Design</li>
+                                 <li>Postman</li>
+                                 <li>Jasmine & Karma</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
+
+                  <li class="list">
+                     <a href="#myModal2" class="link" id="myBtn">About <i class="fa-solid fa-caret-down"></i></a>
+                     <div class="description_box about_box">
+                        <div class="link_description" id="myDescription">
+                           <div class="content-title"><span>About Me</span></div>
+                           <div class="desc_content">
+                              <p>Senior Angular Developer with 7+ years of experience delivering scalable and responsive
+                                 frontend solutions. Expertise in Angular (v7–17), UI optimization, AG-Grid dashboards,
+                                 and Google Maps API integration. Proven experience in mentoring developers and leading UI
+                                 teams in Agile environments, building enterprise-grade applications, and enhancing user
+                                 experience across multiple projects.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </li>
                </ul>
             </div>
+
             <div class="nav_button">
                <a href="tel:+918686125559" class="btn"><i class="fa fa-phone"></i> Contact Me</a>
             </div>
@@ -112,9 +177,7 @@
                <!-- Hero Info -->
                <div class="hero_box">
                   <div class="hello"><p>Hey, I am</p></div>
-                  <div class="job">
-                     <span class="Text"></span>
-                  </div>
+                  <div class="job"><span class="Text"></span></div>
                   <div class="hero_description">
                      <p>Senior Angular Developer with expertise in Angular (v7–17), AG-Grid, Google Maps API, and
                         frontend optimization. Over 7 years of experience delivering scalable, responsive, and
@@ -150,7 +213,7 @@
       </main>
    </div>
 
-   <!-- Typed.js -->
+   <!-- JS -->
    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
    <script>
       // Typed.js
@@ -163,26 +226,25 @@
       });
 
       // Modals
-      const skillsModal = document.getElementById("skillsModal");
-      const toolsModal = document.getElementById("toolsModal");
-      const aboutModal = document.getElementById("aboutModal");
-
-      document.getElementById("skillsBtn").onclick = () => skillsModal.style.display = "block";
-      document.getElementById("toolsBtn").onclick = () => toolsModal.style.display = "block";
-      document.getElementById("aboutBtn").onclick = () => aboutModal.style.display = "block";
-
+      const modals = document.querySelectorAll(".modal");
+      const btns = document.querySelectorAll("#myBtn");
       const closeBtns = document.querySelectorAll(".modal .close");
+
+      btns.forEach((btn, i) => {
+         btn.onclick = () => modals[i].style.display = "block";
+      });
+
       closeBtns.forEach(btn => {
          btn.onclick = () => btn.parentElement.parentElement.style.display = "none";
       });
 
       window.onclick = (event) => {
-         if (event.target.classList.contains('modal')) {
-            event.target.style.display = "none";
-         }
+         modals.forEach(modal => {
+            if (event.target == modal) modal.style.display = "none";
+         });
       };
 
-      // Menu toggle (optional)
+      // Mobile Menu toggle
       function myMenuFunction() {
          document.getElementById("navMenu").classList.toggle("active");
       }
