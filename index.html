@@ -37,7 +37,7 @@
       </div>
    </div>
 
-   <!-- Tools / DevOps Modal -->
+   <!-- Tools Modal -->
    <div class="modal" id="toolsModal">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
@@ -78,9 +78,9 @@
                      <i class="fa fa-times" onclick="menuClose()"></i>
                   </div>
                   <li class="list"><a href="#" class="link">Home</a></li>
-                  <li class="list"><a href="#skillsModal" class="link">Skills <i class="fa-solid fa-caret-down"></i></a></li>
-                  <li class="list"><a href="#toolsModal" class="link">Tools <i class="fa-solid fa-caret-down"></i></a></li>
-                  <li class="list"><a href="#aboutModal" class="link">About <i class="fa-solid fa-caret-down"></i></a></li>
+                  <li class="list"><a href="#skillsModal" class="link" id="skillsBtn">Skills <i class="fa-solid fa-caret-down"></i></a></li>
+                  <li class="list"><a href="#toolsModal" class="link" id="toolsBtn">Tools <i class="fa-solid fa-caret-down"></i></a></li>
+                  <li class="list"><a href="#aboutModal" class="link" id="aboutBtn">About <i class="fa-solid fa-caret-down"></i></a></li>
                </ul>
             </div>
             <div class="nav_button">
@@ -153,6 +153,7 @@
    <!-- Typed.js -->
    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
    <script>
+      // Typed.js
       var typingEffect = new Typed(".Text", {
          strings: ["Basthati Suresh Babu", "Senior Angular Developer"],
          loop: true,
@@ -160,8 +161,35 @@
          backSpeed: 90,
          backDelay: 2000
       });
-   </script>
-   <script src="script.js"></script>
-</body>
 
+      // Modals
+      const skillsModal = document.getElementById("skillsModal");
+      const toolsModal = document.getElementById("toolsModal");
+      const aboutModal = document.getElementById("aboutModal");
+
+      document.getElementById("skillsBtn").onclick = () => skillsModal.style.display = "block";
+      document.getElementById("toolsBtn").onclick = () => toolsModal.style.display = "block";
+      document.getElementById("aboutBtn").onclick = () => aboutModal.style.display = "block";
+
+      const closeBtns = document.querySelectorAll(".modal .close");
+      closeBtns.forEach(btn => {
+         btn.onclick = () => btn.parentElement.parentElement.style.display = "none";
+      });
+
+      window.onclick = (event) => {
+         if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+         }
+      };
+
+      // Menu toggle (optional)
+      function myMenuFunction() {
+         document.getElementById("navMenu").classList.toggle("active");
+      }
+
+      function menuClose() {
+         document.getElementById("navMenu").classList.remove("active");
+      }
+   </script>
+</body>
 </html>
