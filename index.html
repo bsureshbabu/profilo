@@ -214,44 +214,60 @@
    </div>
 
    <!-- JS -->
+
+
+   <!-- JS -->
    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+ 
    <script>
+
       // Typed.js
+
       var typingEffect = new Typed(".Text", {
+
+      var typingEffect = new Typed(".Text", {
+
+         strings: ["Basthati Suresh Babu", "Angular Developer"],
+
          strings: ["Basthati Suresh Babu", "Senior Angular Developer"],
+
          loop: true,
+
+         loop: true,
+
          typeSpeed: 100,
+
+         typeSpeed: 100,
+
          backSpeed: 90,
+
+         backSpeed: 90,
+
          backDelay: 2000
+
+         backDelay: 2000
+
+      })
+
       });
+
+
 
       // Modals
+
       const modals = document.querySelectorAll(".modal");
+
       const btns = document.querySelectorAll("#myBtn");
+
       const closeBtns = document.querySelectorAll(".modal .close");
 
-      btns.forEach((btn, i) => {
-         btn.onclick = () => modals[i].style.display = "block";
-      });
 
-      closeBtns.forEach(btn => {
-         btn.onclick = () => btn.parentElement.parentElement.style.display = "none";
-      });
+</script>
 
-      window.onclick = (event) => {
-         modals.forEach(modal => {
-            if (event.target == modal) modal.style.display = "none";
-         });
-      };
+ 
 
-      // Mobile Menu toggle
-      function myMenuFunction() {
-         document.getElementById("navMenu").classList.toggle("active");
-      }
-
-      function menuClose() {
-         document.getElementById("navMenu").classList.remove("active");
-      }
-   </script>
+   <script src="script.js"></script>
 </body>
 </html>
+
