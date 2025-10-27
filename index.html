@@ -79,20 +79,23 @@
                      <i class="fa fa-times" onclick="menuClose()"></i>
                   </div>
                   <li class="list"><a href="#" class="link">Home</a></li>
-                  <li class="list"><a href="#myModal" class="link" id="myBtn">Skills</a></li>
-                  <li class="list"><a href="#myModal1" class="link" id="myBtn">Tools</a></li>
-                  <li class="list"><a href="#myModal2" class="link" id="myBtn">About</a></li>
+                  <li class="list"><a href="#" class="link" data-modal="myModal">Skills</a></li>
+                  <li class="list"><a href="#" class="link" data-modal="myModal1">Tools</a></li>
+                  <li class="list"><a href="#" class="link" data-modal="myModal2">About</a></li>
                </ul>
             </div>
+
             <div class="nav_button">
                <a href="tel:+918686125559" class="btn"><i class="fa fa-phone"></i> Contact Me</a>
             </div>
+
             <div class="mode">
                <div class="moon-sun" id="toggle-switch">
                   <i class="fa fa-sun" id="sun"></i>
                   <i class="fa fa-moon" id="moon"></i>
                </div>
             </div>
+
             <div class="nav_menu_btn">
                <i class="fa fa-bars" onclick="myMenuFunction()"></i>
             </div>
@@ -103,19 +106,23 @@
       <main class="main">
          <div class="row hero">
             <div class="col col-1">
+
                <div class="social_icons">
                   <a href="https://www.linkedin.com/in/suresh-babu-basthati-750343a2/" target="_blank"><i class="fa-brands fa-linkedin-in icon"></i></a>
                   <a href="https://github.com/bsureshbabu" target="_blank"><i class="fa-brands fa-github icon"></i></a>
                   <a href="https://www.instagram.com/always_babu/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a>
                </div>
+
                <div class="hero_box">
                   <div class="hello"><p>Hey, I am</p></div>
                   <div class="job"><span class="Text"></span></div>
+
                   <div class="hero_description">
                      <p>Senior Angular Developer specializing in scalable UI architecture, AG-Grid dashboards,
                         cloud-integrated platforms, and interactive GIS visualizations using Google Maps API. Experienced
                         in leading UI teams, performance tuning, and enterprise application delivery.</p>
                   </div>
+
                   <div class="hero_btn">
                      <button class="btn_1">Hire Me</button>
                      <button class="btn_2"><a href="Basthati_Suresh_Babu_Sr_Angular.docx" download>Download CV</a></button>
@@ -147,7 +154,7 @@
       </main>
    </div>
 
-   <!-- ✅ NEW PROJECTS SECTION -->
+   <!-- ✅ PROJECTS SECTION -->
    <section class="projects" style="padding:80px 5%; background:#111;">
       <h2 class="content-title" style="text-align:center;"><span>Featured Projects</span></h2>
 
@@ -155,35 +162,30 @@
 
          <div class="project-card">
             <h3>Izomcc – Multi Cloud Connectivity Platform</h3>
-            <p>Developed enterprise Angular modules enabling global users to order cloud services (AWS, Azure, GCP).
-               Implemented AG-Grid pivot tables, workflow management, and MACD (Move, Add, Change, Delete) lifecycle processes.
-               Built role-based dashboards and automated L2O to O2C operational flows.</p>
+            <p>Enterprise-grade cloud provisioning platform enabling global users to configure and order cloud connectivity across AWS, Azure & GCP. Implemented AG-Grid pivot views, workflow orchestration, and automated MACD lifecycle operations.</p>
          </div>
 
          <div class="project-card">
-            <h3>Network Topology Visualization</h3>
-            <p>Built a dynamic network topology system using Google Maps API with curved polylines, device overlays,
-               live-edge rendering, and data-driven interaction layers. Leveraged RxJS Observables for optimized async 
-               updates and large-scale node processing.</p>
+            <h3>Network Topology Visualization System</h3>
+            <p>Developed interactive GIS-based topology maps using Google Maps API with dynamic curved polylines, severity clustering, and real-time device overlays powered by RxJS asynchronous state streams.</p>
          </div>
 
          <div class="project-card">
             <h3>Payroll Processing System</h3>
-            <p>Designed Angular UI workflows integrated with Go backend services for payroll generation, employee
-               management, and reporting. Developed AG-Grid enabled finance dashboards and secure session handling.</p>
+            <p>Designed Angular-driven payroll dashboard integrated with Go services; implemented reactive forms, audit workflows, secured session handling, and AG-Grid-driven financial reporting modules.</p>
          </div>
 
          <div class="project-card">
             <h3>Flutter Mobile Applications</h3>
-            <p>Developed cross-platform mobile apps using Flutter and Dart with reusable UI components, state management,
-               and REST API integrations ensuring smooth UX across Android & iOS.</p>
+            <p>Built cross-platform applications with reusable widget architecture, API-driven data sync, and optimized UI rendering for Android & iOS platforms.</p>
          </div>
 
       </div>
    </section>
-   <!-- ✅ END PROJECTS SECTION -->
 
+   <!-- ✅ Scripts -->
    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
    <script>
       var typingEffect = new Typed(".Text", {
          strings: ["Basthati Suresh Babu", "Senior Angular Developer"],
@@ -192,8 +194,41 @@
          backSpeed: 90,
          backDelay: 2000
       });
+
+      // Modal Logic
+      const openModalButtons = document.querySelectorAll("[data-modal]");
+      const modals = document.querySelectorAll(".modal");
+      const closeButtons = document.querySelectorAll(".modal .close");
+
+      openModalButtons.forEach(btn => {
+         btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById(this.dataset.modal).style.display = "block";
+         });
+      });
+
+      closeButtons.forEach(btn => {
+         btn.addEventListener("click", function () {
+            this.closest(".modal").style.display = "none";
+         });
+      });
+
+      window.onclick = function (e) {
+         modals.forEach(modal => {
+            if (e.target === modal) modal.style.display = "none";
+         });
+      };
+
+      // Navbar Mobile Menu
+      function myMenuFunction() {
+         document.getElementById("navMenu").classList.add("active");
+      }
+      function menuClose() {
+         document.getElementById("navMenu").classList.remove("active");
+      }
+      window.myMenuFunction = myMenuFunction;
+      window.menuClose = menuClose;
    </script>
-   <script src="script.js"></script>
 
 </body>
 </html>
