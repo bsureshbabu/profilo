@@ -6,71 +6,69 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Basthati Suresh Babu | Senior Angular Developer</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      crossorigin="anonymous" />
    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <!-- Modals -->
+
+   <!-- Skills Modal -->
    <div class="modal" id="myModal">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
-         <div class="content-title"><span>Skills</span></div>
+         <div class="content-title"><span>Core Skills</span></div>
          <div class="skills-box">
             <span class="skills-label">Angular 7–17</span>
             <span class="skills-label">TypeScript</span>
-            <span class="skills-label">JavaScript</span>
-            <span class="skills-label">HTML5</span>
-            <span class="skills-label">CSS3</span>
+            <span class="skills-label">JavaScript (ES6+)</span>
+            <span class="skills-label">RxJS</span>
+            <span class="skills-label">NgRx</span>
+            <span class="skills-label">HTML5 / CSS3</span>
             <span class="skills-label">Bootstrap</span>
             <span class="skills-label">Angular Material</span>
             <span class="skills-label">PrimeNG</span>
             <span class="skills-label">AG-Grid</span>
-            <span class="skills-label">RxJS</span>
-            <span class="skills-label">Reactive Forms</span>
-            <span class="skills-label">Google Maps JS API</span>
+            <span class="skills-label">REST API Integration</span>
+            <span class="skills-label">Google Maps JavaScript API</span>
+            <span class="skills-label">Responsive UI Architecture</span>
             <span class="skills-label">Flutter</span>
             <span class="skills-label">Jasmine & Karma</span>
          </div>
       </div>
    </div>
 
+   <!-- Tools Modal -->
    <div class="modal" id="myModal1">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
-         <div class="content-title"><span>Tools & DevOps</span></div>
+         <div class="content-title"><span>Tools & Platforms</span></div>
          <div class="desc_content">
-            <p>Worked with tools and technologies including:</p>
-            <ul class="services_list" style="display:inline-block;">
+            <ul class="services_list">
                <li>Git</li>
                <li>Jenkins</li>
-               <li>Figma</li>
-               <li>PrimeNG</li>
-               <li>AG-Grid</li>
-            </ul>
-            <ul class="services_list" style="display:inline-block;">
-               <li>Vs Code</li>
-               <li>Material Design</li>
                <li>Postman</li>
-               <li>Jasmine & Karma</li>
+               <li>Swagger UI</li>
+               <li>Figma</li>
+               <li>VS Code</li>
+               <li>Agile / Scrum</li>
             </ul>
          </div>
       </div>
    </div>
 
+   <!-- About Modal -->
    <div class="modal" id="myModal2">
       <div class="modal-content">
          <span class="close"><i class="fa fa-times"></i></span>
          <div class="content-title"><span>About Me</span></div>
-         <p>Senior Angular Developer with 7+ years of experience delivering scalable and responsive frontend solutions.
-            Expertise in Angular (v7–17), UI optimization, AG-Grid dashboards, and Google Maps API integration. Proven
-            experience in mentoring developers and leading UI teams in Agile environments, building enterprise-grade
-            applications, and enhancing user experience across multiple projects.</p>
+         <p>Senior Angular Developer with 7+ years of experience delivering enterprise-grade web applications with strong
+            emphasis on UI architecture, performance optimization, reusable component designs, and scalable state
+            management using RxJS and NgRx. Adept in building AG-Grid dashboards, network visualizations, and
+            cloud-integrated web platforms.</p>
       </div>
    </div>
 
-   <!-- Wrapper -->
+   <!-- Navbar -->
    <div class="wrapper">
       <nav class="nav">
          <div class="nav_logo">BSB</div>
@@ -81,73 +79,11 @@
                      <i class="fa fa-times" onclick="menuClose()"></i>
                   </div>
                   <li class="list"><a href="#" class="link">Home</a></li>
-
-                  <li class="list">
-                     <a href="#myModal" class="link" id="myBtn">Skills <i class="fa-solid fa-caret-down"></i></a>
-                     <div class="description_box">
-                        <div class="link_description" id="myDescription">
-                           <div class="content-title"><span>I'm Skilled In</span></div>
-                           <div class="desc_content">
-                              <span class="skills-label">Angular 7–17</span>
-                              <span class="skills-label">TypeScript</span>
-                              <span class="skills-label">JavaScript</span>
-                              <span class="skills-label">HTML5</span>
-                              <span class="skills-label">CSS3</span>
-                              <span class="skills-label">Bootstrap</span>
-                              <span class="skills-label">Angular Material</span>
-                              <span class="skills-label">PrimeNG</span>
-                              <span class="skills-label">AG-Grid</span>
-                              <span class="skills-label">RxJS</span>
-                              <span class="skills-label">Reactive Forms</span>
-                              <span class="skills-label">Google Maps JS API</span>
-                              <span class="skills-label">Flutter</span>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-
-                  <li class="list">
-                     <a href="#myModal1" class="link" id="myBtn">Tools <i class="fa-solid fa-caret-down"></i></a>
-                     <div class="description_box">
-                        <div class="link_description" id="myDescription">
-                           <div class="desc_content" style="flex: 50%;">
-                              <p>Worked with tools and technologies including:</p>
-                              <ul class="services_list" style="display:inline-block;">
-                                 <li>Git</li>
-                                 <li>Jenkins</li>
-                                 <li>Figma</li>
-                                 <li>PrimeNG</li>
-                                 <li>AG-Grid</li>
-                              </ul>
-                              <ul class="services_list" style="display:inline-block;">
-                                 <li>Vs Code</li>
-                                 <li>Material Design</li>
-                                 <li>Postman</li>
-                                 <li>Jasmine & Karma</li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-
-                  <li class="list">
-                     <a href="#myModal2" class="link" id="myBtn">About <i class="fa-solid fa-caret-down"></i></a>
-                     <div class="description_box about_box">
-                        <div class="link_description" id="myDescription">
-                           <div class="content-title"><span>About Me</span></div>
-                           <div class="desc_content">
-                              <p>Senior Angular Developer with 7+ years of experience delivering scalable and responsive
-                                 frontend solutions. Expertise in Angular (v7–17), UI optimization, AG-Grid dashboards,
-                                 and Google Maps API integration. Proven experience in mentoring developers and leading UI
-                                 teams in Agile environments, building enterprise-grade applications, and enhancing user
-                                 experience across multiple projects.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
+                  <li class="list"><a href="#myModal" class="link" id="myBtn">Skills</a></li>
+                  <li class="list"><a href="#myModal1" class="link" id="myBtn">Tools</a></li>
+                  <li class="list"><a href="#myModal2" class="link" id="myBtn">About</a></li>
                </ul>
             </div>
-
             <div class="nav_button">
                <a href="tel:+918686125559" class="btn"><i class="fa fa-phone"></i> Contact Me</a>
             </div>
@@ -163,30 +99,26 @@
          </div>
       </nav>
 
-      <!-- Main Section -->
+      <!-- Hero Section -->
       <main class="main">
          <div class="row hero">
             <div class="col col-1">
-               <!-- Social Links -->
                <div class="social_icons">
                   <a href="https://www.linkedin.com/in/suresh-babu-basthati-750343a2/" target="_blank"><i class="fa-brands fa-linkedin-in icon"></i></a>
                   <a href="https://github.com/bsureshbabu" target="_blank"><i class="fa-brands fa-github icon"></i></a>
                   <a href="https://www.instagram.com/always_babu/" target="_blank"><i class="fa-brands fa-instagram icon"></i></a>
                </div>
-
-               <!-- Hero Info -->
                <div class="hero_box">
                   <div class="hello"><p>Hey, I am</p></div>
                   <div class="job"><span class="Text"></span></div>
                   <div class="hero_description">
-                     <p>Senior Angular Developer with expertise in Angular (v7–17), AG-Grid, Google Maps API, and
-                        frontend optimization. Over 7 years of experience delivering scalable, responsive, and
-                        enterprise-grade applications, mentoring teams, and creating visually stunning, user-friendly
-                        web solutions.</p>
+                     <p>Senior Angular Developer specializing in scalable UI architecture, AG-Grid dashboards,
+                        cloud-integrated platforms, and interactive GIS visualizations using Google Maps API. Experienced
+                        in leading UI teams, performance tuning, and enterprise application delivery.</p>
                   </div>
                   <div class="hero_btn">
                      <button class="btn_1">Hire Me</button>
-                     <button class="btn_2"><a href="resume_basthati_suresh_babu.pdf" download>Download CV</a></button>
+                     <button class="btn_2"><a href="Basthati_Suresh_Babu_Sr_Angular.docx" download>Download CV</a></button>
                   </div>
                </div>
             </div>
@@ -194,6 +126,7 @@
             <div class="col col-2">
                <div class="circle"><img src="bgr.png" alt=""></div>
                <div class="hero-image"><img src="profile.png" alt=""></div>
+
                <div class="clients">
                   <i class="fa-regular fa-user"></i>
                   <div class="clients-content">
@@ -201,6 +134,7 @@
                      <p>Projects Delivered</p>
                   </div>
                </div>
+
                <div class="experience">
                   <i class="fa-regular fa-star"></i>
                   <div class="xp-content">
@@ -213,45 +147,53 @@
       </main>
    </div>
 
-   <!-- JS -->
+   <!-- ✅ NEW PROJECTS SECTION -->
+   <section class="projects" style="padding:80px 5%; background:#111;">
+      <h2 class="content-title" style="text-align:center;"><span>Featured Projects</span></h2>
 
+      <div class="project-grid">
 
-   <!-- JS -->
+         <div class="project-card">
+            <h3>Izomcc – Multi Cloud Connectivity Platform</h3>
+            <p>Developed enterprise Angular modules enabling global users to order cloud services (AWS, Azure, GCP).
+               Implemented AG-Grid pivot tables, workflow management, and MACD (Move, Add, Change, Delete) lifecycle processes.
+               Built role-based dashboards and automated L2O to O2C operational flows.</p>
+         </div>
+
+         <div class="project-card">
+            <h3>Network Topology Visualization</h3>
+            <p>Built a dynamic network topology system using Google Maps API with curved polylines, device overlays,
+               live-edge rendering, and data-driven interaction layers. Leveraged RxJS Observables for optimized async 
+               updates and large-scale node processing.</p>
+         </div>
+
+         <div class="project-card">
+            <h3>Payroll Processing System</h3>
+            <p>Designed Angular UI workflows integrated with Go backend services for payroll generation, employee
+               management, and reporting. Developed AG-Grid enabled finance dashboards and secure session handling.</p>
+         </div>
+
+         <div class="project-card">
+            <h3>Flutter Mobile Applications</h3>
+            <p>Developed cross-platform mobile apps using Flutter and Dart with reusable UI components, state management,
+               and REST API integrations ensuring smooth UX across Android & iOS.</p>
+         </div>
+
+      </div>
+   </section>
+   <!-- ✅ END PROJECTS SECTION -->
+
    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
- 
    <script>
-
-      // Typed.js
-
-    
-
-var typingEffect = new Typed(".Text", {
-   strings: ["Basthati Suresh Babu", "Senior Angular Developer"],
-   loop: true,
-   typeSpeed: 100,
-   backSpeed: 90,
-   backDelay: 2000
-});
-    
-
-
-
-      // Modals
-
-      const modals = document.querySelectorAll(".modal");
-
-      const btns = document.querySelectorAll("#myBtn");
-
-      const closeBtns = document.querySelectorAll(".modal .close");
-
-
-</script>
-
- 
-
+      var typingEffect = new Typed(".Text", {
+         strings: ["Basthati Suresh Babu", "Senior Angular Developer"],
+         loop: true,
+         typeSpeed: 100,
+         backSpeed: 90,
+         backDelay: 2000
+      });
+   </script>
    <script src="script.js"></script>
+
 </body>
-</html>  
-
-
+</html>
